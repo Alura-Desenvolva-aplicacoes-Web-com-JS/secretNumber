@@ -1,4 +1,5 @@
 const elementoChute = document.querySelector('#chute')
+
 window.SpeechRecognition = window.SpeechRecognition || 
 webkitSpeechRecognition;
 
@@ -12,9 +13,12 @@ recognition.addEventListener('result', onSpeak)
 function onSpeak(e){
     chute = e.results[0][0].transcript
     exibeChute(chute)
+    validaChute(chute)
 }
 
 function exibeChute(chute){
     elementoChute.innerHTML = `<div>Você disse</div>
     <span class="box">${chute}</span>`
 }
+
+recognition.addEventListener('end', () => recognition.start())
