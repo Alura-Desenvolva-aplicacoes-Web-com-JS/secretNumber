@@ -4,6 +4,9 @@
     --font-main: 'Montserrat', sans-serif;
     --bg-color: #2C3333;
     --primary-color: #A5C9CA;
+    --secondary-color: #395B64;
+    --btn-text-color: #E7F6F2;
+    --black: #000;
 }
 
 body{
@@ -45,4 +48,21 @@ h3{
     margin: 1em;
     border-radius: .25em;
     font-weight: bold;
+}
+
+.btn-jogar{
+    padding: 1em 2em;
+    font-size: 1.5em;
+    border-radius: .25em;
+    font-weight: bold;
+    background-color: var(--secondary-color);
+    color: var(--btn-text-color);
+    border: none;
+    margin-top: 2em;
+}
+
+.btn-jogar:hover{
+    background-color: var(--primary-color);
+    color: var(--black);
+    transition: .5s;
 }
